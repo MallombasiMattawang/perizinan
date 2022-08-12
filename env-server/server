@@ -1,0 +1,32 @@
+server
+{
+    listen 80;
+	listen 443 ssl;
+    server_name simap.bulukumbakab.go.id;
+    index index.php index.html index.htm default.php default.htm default.html;
+    root /opt/slemp/wwwroot/simap.bulukumbakab.go.id/public;
+    #error_page 404/404.html;
+    ssl_certificate    /etc/letsencrypt/live/simap.bulukumbakab.go.id/fullchain.pem;
+    ssl_certificate_key    /etc/letsencrypt/live/simap.bulukumbakab.go.id/privkey.pem;
+    if ($server_port !~ 443){
+        rewrite ^/.*$ https://$host$uri;
+    }
+    error_page 497  https://$host$uri;
+
+    error_page 404 /404.html;
+    error_page 502 /502.html;
+
+    include enable-php-73.conf;
+    include /opt/slemp/server/panel/data/rewrite/simap.bulukumbakab.go.id.conf;
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+    {
+        expires      30d;
+        access_log off;
+    }
+    location ~ .*\.(js|css)?$
+    {
+        expires      12h;
+        access_log off;
+    }
+    access_log  /opt/slemp/wwwlogs/simap.bulukumbakab.go.id.log;
+}
