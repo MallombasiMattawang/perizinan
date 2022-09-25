@@ -76,7 +76,7 @@ class PrintController extends Controller
         $encrypted = Crypt::encryptString($number_letter);
 
         $qrcode = 'data:image/png;base64,' . base64_encode(
-            QrCode::format('png')->size(100)->generate(url('verification?key=' . $encrypted)),
+            QrCode::format('png')->size(100)->generate(url('verification?key=' . $number_letter)),
         );
 
         //$template->setImageValue('qrcode', 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://siap.bulukumbakab.go.id/verification/'.$number_letter.'');

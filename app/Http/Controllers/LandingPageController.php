@@ -26,7 +26,7 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $services = Service::where('active', 1)->paginate(100); 
         return view('landing-page', [
             'services' => $services
         ]);

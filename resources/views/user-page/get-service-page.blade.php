@@ -74,17 +74,12 @@
                                                 value="{{ $service->format_number }}">
 
                                             <div class="row gx-3">
-
-                                                <div class="mb-3 col-md-6">
+                                                <div class="mb-3 col-md-12">
                                                     <label class="small mb-1" for="applicant_name">Nama pemohon</label>
                                                     <input class="form-control" id="applicant_name" name="applicant_name"
                                                         type="text" placeholder="" required>
                                                 </div>
-                                                <div class="mb-3 col-md-6">
-                                                    <label class="small mb-1" for="no_kk">No KK (Kartu Keluarga)</label>
-                                                    <input class="form-control" id="no_kk" name="no_kk" type="text"
-                                                        placeholder="" required>
-                                                </div>
+                                               
 
                                             </div>
                                             <div class="row gx-3">
@@ -95,10 +90,15 @@
                                                         placeholder="" required>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
+                                                    <label class="small mb-1" for="no_kk">No KK (Kartu Keluarga)</label>
+                                                    <input class="form-control" id="no_kk" name="no_kk" type="text"
+                                                        placeholder="" required>
+                                                </div>
+                                                {{-- <div class="mb-3 col-md-6">
                                                     <label class="small mb-1" for="npwp">NPWP</label>
                                                     <input class="form-control" id="npwp" name="npwp" type="text"
                                                         placeholder="" required>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
                                             <div class="row gx-3">

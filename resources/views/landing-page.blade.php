@@ -59,7 +59,7 @@
                     <div class="row">
                         <h6 class="section-heading text-uppercase">Perizinan Populer</h6>
 
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <div class="card" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-3 text-center">
@@ -120,7 +120,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-6">
                             <div class="card" style="max-width: 540px;">
                                 <div class="row no-gutters">
@@ -178,6 +178,28 @@
                                                 <h5 class="card-title">PENELITIAN</h5>
                                                 <p class="card-text"><small class="text-muted">Surat Izin
                                                         Penelitian
+                                                    </small></p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 text-center">
+                                        <img src="assets/landing-page/img/icons/car.svg" width="50" height="50"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <a data-bs-toggle="modal" href="#empModal" data-id="25"
+                                                class="layanan-info">
+                                                <h5 class="card-title">Izin Trayek</h5>
+                                                <p class="card-text"><small class="text-muted">Surat Izin
+                                                        Trayek
                                                     </small></p>
                                             </a>
 

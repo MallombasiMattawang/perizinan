@@ -113,8 +113,8 @@ class TrackingController extends Controller
     // menangkap data pencarian
     $key = $request->key;
     try {
-      $decrypted = Crypt::decryptString($key);
-      $track = ProgresDocument::where('number_letter', $decrypted)->first();
+     // $decrypted = Crypt::decryptString($key);
+      $track = ProgresDocument::where('number_letter', $key)->first();
 
       // mengirim data progress ke view index
       return view('tracking.verification', ['track' => $track]);

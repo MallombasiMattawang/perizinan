@@ -41,9 +41,9 @@ class ProgresDocumentController extends Controller
             [
                 //'user_id' => 'required|exists:users,id',
                 'service_id' => 'required|exists:services,id',
-                'nik' => 'required|numeric|min:16',
-                'no_kk' => 'required|numeric|min:16',
-                'npwp' => 'required|numeric|min:16',
+                'nik' => 'required|numeric|digits:16',
+                'no_kk' => 'required|numeric|digits:16',
+                //'npwp' => 'required|numeric|min:16',
                 'date_of_birth' => 'required',
                 'place_of_birth' => 'required',
                 'applicant_name' => 'required',
@@ -54,9 +54,9 @@ class ProgresDocumentController extends Controller
             ],
             [
                 'required' => ':attribute harus diisi',
-                'nik.min' => 'Nik Harus 16 karakter ',
-                'no_kk.min' => 'Nomor KK Harus 16 karakter ',
-                'npwp.min' => 'Nik Harus 16 karakter',
+                'nik.digits' => 'Nik Harus 16 karakter ',
+                'no_kk.digits' => 'Nomor KK Harus 16 karakter ',
+                //'npwp.min' => 'Nik Harus 16 karakter',
                 'numeric' => ':attribute harus berupa angka '
             ]
         );
@@ -142,9 +142,9 @@ class ProgresDocumentController extends Controller
         $request->validate(
             [
                 'id' => 'required|exists:progres_documents,id',
-                'nik' => 'required|numeric|min:16',
-                'no_kk' => 'required|numeric|min:16',
-                'npwp' => 'required|numeric|min:16',
+                'nik' => 'required|numeric|digits:16',
+                'no_kk' => 'required|numeric|digits:16',
+                //'npwp' => 'required|numeric|min:16',
                 'date_of_birth' => 'required',
                 'place_of_birth' => 'required',
                 'applicant_name' => 'required',
@@ -154,9 +154,9 @@ class ProgresDocumentController extends Controller
             ],
             [
                 'required' => ':attribute harus diisi',
-                'nik.min' => 'Nik Harus 16 karakter ',
-                'no_kk.min' => 'Nomor KK Harus 16 karakter ',
-                'npwp.min' => 'Npwp Harus 16 karakter',
+                'nik.digits' => 'Nik Harus 16 karakter ',
+                'no_kk.digits' => 'Nomor KK Harus 16 karakter ',
+                //'npwp.min' => 'Npwp Harus 16 karakter',
                 'numeric' => ':attribute harus berupa angka '
             ]
         );
